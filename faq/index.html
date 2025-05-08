@@ -78,9 +78,9 @@
         return urlParams.get(param) || 'en'; // 默认返回'en'
       };
 
-      const getFAQData = async callback => {
+      const getFAQData = async (callback, fallback = false) => {
         const lang = getQueryParam('hl');
-        const url = `${baseUrl}/${lang}.json`;
+        const url = `${baseUrl}/${fallback ? 'en' : lang}.json`;
 
         try {
           const response = await fetch(url);
@@ -123,8 +123,9 @@
       window.onload = () => {
         getFAQData((error, data) => {
           if (error) {
-            console.error('Network Error:', error);
-            showError('Network Error');
+            getFAQData((e, data) => {
+              renderFAQ(data);
+            }, true);
             return;
           }
           renderFAQ(data);
