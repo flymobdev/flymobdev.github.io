@@ -1,0 +1,63 @@
+{
+  "faqs": [
+    {
+      "question": "Question 1: The app shows that it can't connect to the TV's Wi-Fi network. What should I do?",
+      "answer": [
+        "Check whether the TV and the mobile phone are connected to the same Wi-Fi network.",
+        "Confirm if the Wi-Fi network is working properly. You can try connecting other devices for a test.",
+        "Restart the TV and the router. Sometimes this can solve the connection problem."
+      ]
+    },
+    {
+      "question": "Question 2: The app can connect to Wi-Fi but fails to control the TV functions. What's the reason?",
+      "answer": [
+        "Ensure that the app has been updated to the latest version. Older versions may have compatibility issues.",
+        "Check if the TV system needs to be updated to support the control functions of the app.",
+        "It might be that the control permissions of the TV are not set correctly in the app. Log in to the app again and check the permission settings."
+      ]
+    },
+    {
+      "question": "Question 3: When the app is connected to Wi-Fi to control the TV, it responds slowly or gets stuck. How to solve it?",
+      "answer": [
+        "Check the network bandwidth. Heavy usage of the network by other devices might cause lag. Pause the heavy traffic usage of other devices.",
+        "Clear the memory of the mobile phone and the cache of the TV to release system resources.",
+        "Try reinstalling the app and restarting the TV."
+      ]
+    },
+    {
+      "question": "Question 4: I forgot the Wi-Fi password of the TV and can't connect. How to retrieve it?",
+      "answer": [
+        "You can view the password information of the connected devices on the router management page.",
+        "If the router supports the WPS button connection, you can directly pair via the WPS connection function on the mobile phone app without entering the password."
+      ]
+    },
+    {
+      "question": "Question 5: After changing the Wi-Fi network, the app can't control the TV. How to deal with it?",
+      "answer": [
+        "Re-select the new Wi-Fi network in the TV's network settings and enter the password to connect.",
+        "Re-search and connect to the TV in the app."
+      ]
+    },
+    {
+      "question": "Question 6: The TV has a good Wi-Fi signal strength, but the app still can't control it. What to do?",
+      "answer": [
+        "It might be that there is a problem with the communication protocol between the TV and the app. Try uninstalling and reinstalling the app.",
+        "The firewall or security settings of the TV might prevent the connection of the app. Check the relevant settings of the TV and allow the app to access."
+      ]
+    },
+    {
+      "question": "Question 7: Conflicts occur when multiple devices use the app to control the TV simultaneously. How to avoid it?",
+      "answer": [
+        "It is recommended to use only one device to control the TV via the app at a time.",
+        "If a conflict occurs, close the app on other devices or reconnect to Wi-Fi and open the app."
+      ]
+    },
+    {
+      "question": "Question 8: Contact with support (sgflymob@gmail.com) : send your tv model and brand to support to get help",
+      "answer": [
+        "Take a full picture if you do not know your model.",
+        "Describe as more detail as possible with your problem."
+      ]
+    }
+  ]
+}

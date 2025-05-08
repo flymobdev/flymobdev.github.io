@@ -1,0 +1,63 @@
+{
+  "faqs": [
+    {
+      "question": "Pregunta 1: La aplicación muestra que no puede conectarse a la red Wi-Fi del televisor. ¿Qué debo hacer?",
+      "answer": [
+        "Verifique si el televisor y el teléfono móvil están conectados a la misma red Wi-Fi.",
+        "Confirme que la red Wi-Fi funciona correctamente. Puede intentar conectar otros dispositivos para realizar una prueba.",
+        "Reinicie el televisor y el enrutador. A veces esto puede resolver el problema de conexión."
+      ]
+    },
+    {
+      "question": "Pregunta 2: La aplicación puede conectarse a Wi-Fi pero no controla las funciones del televisor. ¿Cuál es la razón?",
+      "answer": [
+        "Asegúrese de que la aplicación esté actualizada a la última versión. Las versiones antiguas pueden tener problemas de compatibilidad.",
+        "Verifique si el sistema del televisor necesita actualizarse para admitir las funciones de control de la aplicación.",
+        "Es posible que los permisos de control del televisor no estén configurados correctamente en la aplicación. Vuelva a iniciar sesión en la aplicación y revise la configuración de permisos."
+      ]
+    },
+    {
+      "question": "Pregunta 3: Cuando la aplicación está conectada a Wi-Fi para controlar el televisor, responde lentamente o se bloquea. ¿Cómo solucionarlo?",
+      "answer": [
+        "Verifique el ancho de banda de la red. El uso intensivo de la red por otros dispositivos puede causar retrasos. Pausa el uso de tráfico pesado en otros dispositivos.",
+        "Libere la memoria del teléfono móvil y la caché del televisor para liberar recursos del sistema.",
+        "Intente reinstalar la aplicación y reiniciar el televisor."
+      ]
+    },
+    {
+      "question": "Pregunta 4: Olvidé la contraseña de Wi-Fi del televisor y no puedo conectarme. ¿Cómo recuperarla?",
+      "answer": [
+        "Puede ver la información de la contraseña de los dispositivos conectados en la página de administración del enrutador.",
+        "Si el enrutador admite la conexión mediante el botón WPS, puede emparejar directamente a través de la función de conexión WPS en la aplicación del teléfono móvil sin ingresar la contraseña."
+      ]
+    },
+    {
+      "question": "Pregunta 5: Después de cambiar la red Wi-Fi, la aplicación no puede controlar el televisor. ¿Cómo solucionarlo?",
+      "answer": [
+        "Vuelva a seleccionar la nueva red Wi-Fi en la configuración de red del televisor e ingrese la contraseña para conectarse.",
+        "Vuelva a buscar y conectarse al televisor en la aplicación."
+      ]
+    },
+    {
+      "question": "Pregunta 6: El televisor tiene buena señal de Wi-Fi, pero la aplicación aún no puede controlarlo. ¿Qué hacer?",
+      "answer": [
+        "Puede haber un problema con el protocolo de comunicación entre el televisor y la aplicación. Intente desinstalar y reinstalar la aplicación.",
+        "El firewall o la configuración de seguridad del televisor pueden estar bloqueando la conexión de la aplicación. Verifique la configuración relevante del televisor y permita el acceso a la aplicación."
+      ]
+    },
+    {
+      "question": "Pregunta 7: Hay conflictos cuando varios dispositivos usan la aplicación para controlar el televisor al mismo tiempo. ¿Cómo evitarlo?",
+      "answer": [
+        "Se recomienda usar solo un dispositivo para controlar el televisor a través de la aplicación a la vez.",
+        "Si ocurre un conflicto, cierre la aplicación en otros dispositivos o vuelva a conectarse a Wi-Fi y abra la aplicación."
+      ]
+    },
+    {
+      "question": "Pregunta 8: Contactar con soporte (sgflymob@gmail.com): envíe el modelo y marca de su televisor para obtener ayuda",
+      "answer": [
+        "Tome una foto completa si no conoce su modelo.",
+        "Describa su problema con el mayor detalle posible."
+      ]
+    }
+  ]
+}

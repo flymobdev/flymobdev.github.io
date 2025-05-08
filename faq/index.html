@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+      #faq {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .faq-question {
+        font-weight: bold;
+        color: #0073e6;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e6f3ff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .faq-question:hover {
+        background-color: #cce6ff;
+      }
+      .faq-answer {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-left: 4px solid #0073e6;
+        border-radius: 5px;
+        display: none;
+      }
+      .faq-answer ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      .faq-answer li {
+        margin-bottom: 10px;
+      }
+      .faq-question.active + .faq-answer {
+        display: block;
+      }
+      .error-message {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #ffebee;
+        border-left: 4px solid #f44336;
+        border-radius: 5px;
+        color: #b71c1c;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="faq"></div>
+    <script>
+      // FAQ JSON URL
+      const baseUrl = '/faq/lang';
+
+      const showError = message => {
+        const faqContainer = document.getElementById('faq');
+        faqContainer.innerHTML = `<div class="error-message">${message}</div>`;
+      };
+
+      const getQueryParam = param => {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param) || 'en'; // 默认返回'en'
+      };
+
+      const getFAQData = async callback => {
+        const lang = getQueryParam('hl');
+        const url = `${baseUrl}/${lang}.json`;
+
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error('Network Error');
+          }
+          const data = await response.json();
+          callback(null, data);
+        } catch (error) {
+          callback(error);
+        }
+      };
+
+      const renderFAQ = data => {
+        const faqContainer = document.getElementById('faq');
+        let html = '';
+
+        data.faqs.forEach(faq => {
+          html += `<div class="faq-question">${faq.question}</div>`;
+          html += '<div class="faq-answer"><ul>';
+          faq.answer.forEach(answer => {
+            html += `<li>${answer}</li>`;
+          });
+          html += '</ul></div>';
+        });
+
+        faqContainer.innerHTML = html;
+        addClickHandlers();
+      };
+
+      const addClickHandlers = () => {
+        const questions = document.getElementsByClassName('faq-question');
+        Array.from(questions).forEach(question => {
+          question.addEventListener('click', function () {
+            this.classList.toggle('active');
+          });
+        });
+      };
+
+      window.onload = () => {
+        getFAQData((error, data) => {
+          if (error) {
+            console.error('Network Error:', error);
+            showError('Network Error');
+            return;
+          }
+          renderFAQ(data);
+        });
+      };
+    </script>
+  </body>
+</html>

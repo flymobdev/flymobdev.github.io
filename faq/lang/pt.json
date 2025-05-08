@@ -1,0 +1,63 @@
+{
+  "faqs": [
+    {
+      "question": "Pergunta 1: O aplicativo mostra que não consegue se conectar à rede Wi-Fi da TV. O que devo fazer?",
+      "answer": [
+        "Verifique se a TV e o celular estão conectados à mesma rede Wi-Fi.",
+        "Confirme se a rede Wi-Fi está funcionando corretamente. Você pode tentar conectar outros dispositivos para testar.",
+        "Reinicie a TV e o roteador. Às vezes isso pode resolver o problema de conexão."
+      ]
+    },
+    {
+      "question": "Pergunta 2: O aplicativo consegue se conectar ao Wi-Fi, mas não controla as funções da TV. Qual é o motivo?",
+      "answer": [
+        "Certifique-se de que o aplicativo está atualizado para a versão mais recente. Versões antigas podem ter problemas de compatibilidade.",
+        "Verifique se o sistema da TV precisa ser atualizado para suportar as funções de controle do aplicativo.",
+        "Pode ser que as permissões de controle da TV não estejam configuradas corretamente no aplicativo. Faça login novamente no aplicativo e verifique as configurações de permissão."
+      ]
+    },
+    {
+      "question": "Pergunta 3: Quando o aplicativo está conectado ao Wi-Fi para controlar a TV, ele responde lentamente ou trava. Como resolver?",
+      "answer": [
+        "Verifique a largura de banda da rede. O uso intensivo da rede por outros dispositivos pode causar lentidão. Pause o uso de tráfego pesado em outros dispositivos.",
+        "Libere a memória do celular e o cache da TV para liberar recursos do sistema.",
+        "Tente reinstalar o aplicativo e reiniciar a TV."
+      ]
+    },
+    {
+      "question": "Pergunta 4: Esqueci a senha do Wi-Fi da TV e não consigo me conectar. Como recuperá-la?",
+      "answer": [
+        "Você pode visualizar as informações de senha dos dispositivos conectados na página de administração do roteador.",
+        "Se o roteador suportar conexão por botão WPS, você pode emparelhar diretamente através da função de conexão WPS no aplicativo do celular sem inserir a senha."
+      ]
+    },
+    {
+      "question": "Pergunta 5: Após alterar a rede Wi-Fi, o aplicativo não consegue controlar a TV. Como lidar com isso?",
+      "answer": [
+        "Selecione novamente a nova rede Wi-Fi nas configurações de rede da TV e insira a senha para conectar.",
+        "Pesquise novamente e conecte-se à TV no aplicativo."
+      ]
+    },
+    {
+      "question": "Pergunta 6: A TV tem boa força de sinal Wi-Fi, mas o aplicativo ainda não consegue controlá-la. O que fazer?",
+      "answer": [
+        "Pode haver um problema com o protocolo de comunicação entre a TV e o aplicativo. Tente desinstalar e reinstalar o aplicativo.",
+        "O firewall ou as configurações de segurança da TV podem estar bloqueando a conexão do aplicativo. Verifique as configurações relevantes da TV e permita o acesso ao aplicativo."
+      ]
+    },
+    {
+      "question": "Pergunta 7: Conflitos ocorrem quando vários dispositivos usam o aplicativo para controlar a TV simultaneamente. Como evitar?",
+      "answer": [
+        "Recomenda-se usar apenas um dispositivo para controlar a TV através do aplicativo por vez.",
+        "Se ocorrer um conflito, feche o aplicativo em outros dispositivos ou reconecte-se ao Wi-Fi e abra o aplicativo."
+      ]
+    },
+    {
+      "question": "Pergunta 8: Contato com suporte (sgflymob@gmail.com): envie o modelo e marca da sua TV para obter ajuda",
+      "answer": [
+        "Tire uma foto completa se você não souber o modelo.",
+        "Descreva seu problema com o máximo de detalhes possível."
+      ]
+    }
+  ]
+}
