@@ -18,6 +18,11 @@
         margin: 0;
         padding: 16px;
       }
+
+      a {
+        color: var(--list-dot-color);
+        -webkit-tap-highlight-color: transparent;
+      }
       #faq {
         max-width: 800px;
         margin: 0 auto;
@@ -40,7 +45,12 @@
         font-weight: 600;
         cursor: pointer;
         line-height: 1;
+        -webkit-tap-highlight-color: transparent;
       }
+      .faq-question:active {
+        background-color: transparent;
+      }
+
       .faq-question > svg {
         flex: none;
         transform: rotate(180deg);
@@ -80,6 +90,9 @@
         position: absolute;
         left: 0;
         top: 4px;
+      }
+      .faq-answer li.no-dot::before {
+        display: none;
       }
       .error-message {
         max-width: 800px;
@@ -152,7 +165,8 @@
           </div>`;
           html += '<div class="faq-answer"><ul>';
           faq.answer.forEach(answer => {
-            html += `<li>${answer}</li>`;
+            const hasMailto = answer.includes('mailto:');
+            html += `<li class="${hasMailto ? 'no-dot' : ''}">${answer}</li>`;
           });
           html += '</ul></div>';
           html += '</div>';

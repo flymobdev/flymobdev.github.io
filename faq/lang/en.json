@@ -53,10 +53,11 @@
       ]
     },
     {
-      "question": "Question 8: Contact with support (sgflymob@gmail.com) : send your tv model and brand to support to get help",
+      "question": "Question 8: Contact with support email: send your tv model and brand to support to get help",
       "answer": [
         "Take a full picture if you do not know your model.",
-        "Describe as more detail as possible with your problem."
+        "Describe as more detail as possible with your problem.",
+        "<a href='mailto:sgflymob@gmail.com'>sgflymob@gmail.com</a>"
       ]
     }
   ]

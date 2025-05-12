@@ -56,7 +56,8 @@
       "question": "Pergunta 8: Contato com suporte (sgflymob@gmail.com): envie o modelo e marca da sua TV para obter ajuda",
       "answer": [
         "Tire uma foto completa se você não souber o modelo.",
-        "Descreva seu problema com o máximo de detalhes possível."
+        "Descreva seu problema com o máximo de detalhes possível.",
+        "<a href='mailto:sgflymob@gmail.com'>sgflymob@gmail.com</a>"
       ]
     }
   ]
