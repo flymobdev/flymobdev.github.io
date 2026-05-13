@@ -1,97 +1,97 @@
 {
   "faqs": [
     {
-      "question": "Q1. What devices/protocols are supported?",
+      "question": "P1. ¿Qué dispositivos/protocolos son compatibles?",
       "answer": [
-        "Chromecast, AirPlay (Apple TV/AirPlay 2‑compatible TVs), LG webOS TVs, and most Miracast‑compatible devices. Phone and TV must share the same Wi‑Fi."
+        "Chromecast, AirPlay (Apple TV/televisores compatibles con AirPlay 2), televisores LG webOS y la mayoría de los dispositivos compatibles con Miracast. El teléfono y el televisor deben compartir la misma red Wi‑Fi."
       ]
     },
     {
-      "question": "Q2. Do phone and TV have to be on the same Wi-Fi?",
+      "question": "P2. ¿El teléfono y el televisor tienen que estar en la misma red Wi‑Fi?",
       "answer": [
-        "Yes. Discovery and casting require the same router/subnet. Hotspots or client‑isolation networks may block discovery."
+        "Sí. La detección y la transmisión requieren el mismo router/subred. Los puntos de acceso móviles o las redes con aislamiento de clientes pueden bloquear la detección."
       ]
     },
     {
-      "question": "Q3. Why do you request Screen Capture and Microphone permissions?",
+      "question": "P3. ¿Por qué solicitan permisos de Captura de pantalla y Micrófono?",
       "answer": [
-        "Screen Capture is the Android system authorization to mirror your display. Microphone permission enables audio mirroring on devices where system audio can’t be captured directly."
+        "Captura de pantalla es la autorización del sistema Android para duplicar la pantalla. El permiso de Micrófono habilita la duplicación de audio en dispositivos donde el audio del sistema no puede capturarse directamente."
       ]
     },
     {
-      "question": "Q4. How do I enable or disable audio mirroring?",
+      "question": "P4. ¿Cómo activo o desactivo la duplicación de audio?",
       "answer": [
-        "Toggle Sound Mirroring before starting. Grant the mic permission when prompted. If you hear echo/noise, turn the toggle off to mirror video only."
+        "Activa o desactiva Sound Mirroring antes de empezar. Concede el permiso de micrófono cuando se solicite. Si escuchas eco o ruido, desactiva el interruptor para duplicar solo el video."
       ]
     },
     {
-      "question": "Q5. Can I change resolution and frame rate?",
+      "question": "P5. ¿Puedo cambiar la resolución y la velocidad de fotogramas?",
       "answer": [
-        "Yes. Set these before starting. Higher resolution is sharper but needs more bandwidth; higher frame rate is smoother but uses more battery and network."
+        "Sí. Configúralas antes de empezar. Una resolución más alta se ve más nítida, pero necesita más ancho de banda; una velocidad de fotogramas más alta es más fluida, pero consume más batería y red."
       ]
     },
     {
-      "question": "Q6. My TV/device isn’t found. What should I do?",
+      "question": "P6. No se encuentra mi televisor/dispositivo. ¿Qué debo hacer?",
       "answer": [
-        "Check:",
-        "Phone and TV on the same Wi-Fi; VPN/proxy disabled.",
-        "Router AP/client isolation is off; prefer 5 GHz.",
-        "TV has casting mode enabled (AirPlay/Miracast, etc.).",
-        "Reboot router, TV, and phone, then rescan."
+        "Comprueba lo siguiente:",
+        "Teléfono y televisor en la misma red Wi‑Fi; VPN/proxy desactivados.",
+        "El aislamiento AP/cliente del router está desactivado; se recomienda 5 GHz.",
+        "El modo de transmisión del televisor está activado (AirPlay/Miracast, etc.).",
+        "Reinicia el router, el televisor y el teléfono, y vuelve a buscar."
       ]
     },
     {
-      "question": "Q7. Connected but the TV is black/no picture.",
+      "question": "P7. Está conectado, pero la pantalla del televisor está negra/no hay imagen.",
       "answer": [
-        "Some apps block mirroring due to DRM or casting restrictions. Try other content (local media, photos, games) or another app that allows mirroring."
+        "Algunas apps bloquean la duplicación por DRM o restricciones de transmisión. Prueba otro contenido (archivos locales, fotos, juegos) u otra app que permita duplicación."
       ]
     },
     {
-      "question": "Q8. I see video but no sound.",
+      "question": "P8. Veo video, pero no hay sonido.",
       "answer": [
-        "Enable Sound Mirroring and grant the mic permission before starting. Check TV volume/mute. Some content blocks audio capture."
+        "Activa Sound Mirroring y concede el permiso de micrófono antes de empezar. Comprueba el volumen/silencio del televisor. Algunos contenidos bloquean la captura de audio."
       ]
     },
     {
-      "question": "Q9. High delay or stutter—how to improve?",
+      "question": "P9. Hay mucho retraso o cortes: ¿cómo puedo mejorarlo?",
       "answer": [
-        "Use 5 GHz Wi-Fi, move closer to the router, reduce other network usage, lower resolution or frame rate, close heavy background apps, and reboot the router if needed."
+        "Usa Wi‑Fi de 5 GHz, acércate al router, reduce el uso de red de otros dispositivos, baja la resolución o la velocidad de fotogramas, cierra apps pesadas en segundo plano y reinicia el router si es necesario."
       ]
     },
     {
-      "question": "Q10. Why do I get a PIN/pairing prompt?",
+      "question": "P10. ¿Por qué aparece un PIN o una solicitud de emparejamiento?",
       "answer": [
-        "Some devices (e.g., AirPlay, certain TVs) require first‑time pairing. Enter the PIN shown on the TV or confirm on the TV screen."
+        "Algunos dispositivos (por ejemplo, AirPlay y ciertos televisores) requieren emparejamiento la primera vez. Introduce el PIN que aparece en el televisor o confirma en la pantalla del televisor."
       ]
     },
     {
-      "question": "Q11. How do I stop mirroring quickly?",
+      "question": "P11. ¿Cómo detengo la duplicación rápidamente?",
       "answer": [
-        "Pull down the notification shade and tap Stop Mirroring, or tap Stop on the app’s main screen."
+        "Desliza hacia abajo la barra de notificaciones y toca Stop Mirroring, o toca Stop en la pantalla principal de la app."
       ]
     },
     {
-      "question": "Q12. What happens when Wi-Fi is unavailable?",
+      "question": "P12. ¿Qué ocurre cuando no hay Wi‑Fi disponible?",
       "answer": [
-        "The app detects Wi-Fi status and guides you to connect to a network before scanning again."
+        "La app detecta el estado del Wi‑Fi y te guía para conectarte a una red antes de volver a buscar."
       ]
     },
     {
-      "question": "Q13. Do you store my screen content?",
+      "question": "P13. ¿Almacenan el contenido de mi pantalla?",
       "answer": [
-        "No. Mirroring data stays on your local network and is used only to cast to your TV. We don’t store or upload your screen."
+        "No. Los datos de duplicación permanecen en tu red local y se usan solo para transmitir al televisor. No almacenamos ni subimos tu pantalla."
       ]
     },
     {
-      "question": "Q14. Can I use other apps on my phone while mirroring?",
+      "question": "P14. ¿Puedo usar otras apps en mi teléfono mientras duplico la pantalla?",
       "answer": [
-        "Yes, but DRM‑protected apps may block output. If you see throttling or lag, go to Home or lower quality and try again."
+        "Sí, pero las apps protegidas por DRM pueden bloquear la salida. Si notas limitación de rendimiento o retraso, ve a Inicio o reduce la calidad e inténtalo de nuevo."
       ]
     },
     {
-      "question": "Q15. Does mirroring continue when the phone is locked?",
+      "question": "P15. ¿La duplicación continúa cuando el teléfono está bloqueado?",
       "answer": [
-        "Some devices lower frame rate or stop in lock/power‑saving modes. Keep the screen awake or disable aggressive battery optimizations."
+        "Algunos dispositivos reducen la velocidad de fotogramas o se detienen en modo de bloqueo/ahorro de energía. Mantén la pantalla activa o desactiva las optimizaciones agresivas de batería."
       ]
     }
   ]

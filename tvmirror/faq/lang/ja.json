@@ -1,97 +1,97 @@
 {
   "faqs": [
     {
-      "question": "Q1. What devices/protocols are supported?",
+      "question": "Q1. 対応しているデバイス/プロトコルは何ですか？",
       "answer": [
-        "Chromecast, AirPlay (Apple TV/AirPlay 2‑compatible TVs), LG webOS TVs, and most Miracast‑compatible devices. Phone and TV must share the same Wi‑Fi."
+        "Chromecast、AirPlay（Apple TV/AirPlay 2対応テレビ）、LG webOSテレビ、および多くのMiracast対応デバイスに対応しています。スマートフォンとテレビは同じWi‑Fiに接続している必要があります。"
       ]
     },
     {
-      "question": "Q2. Do phone and TV have to be on the same Wi-Fi?",
+      "question": "Q2. スマートフォンとテレビは同じWi‑Fiに接続する必要がありますか？",
       "answer": [
-        "Yes. Discovery and casting require the same router/subnet. Hotspots or client‑isolation networks may block discovery."
+        "はい。デバイスの検出とキャストには、同じルーター/サブネットが必要です。テザリングやクライアント分離が有効なネットワークでは、検出がブロックされる場合があります。"
       ]
     },
     {
-      "question": "Q3. Why do you request Screen Capture and Microphone permissions?",
+      "question": "Q3. 画面キャプチャとマイクの権限を要求するのはなぜですか？",
       "answer": [
-        "Screen Capture is the Android system authorization to mirror your display. Microphone permission enables audio mirroring on devices where system audio can’t be captured directly."
+        "画面キャプチャは、画面をミラーリングするためのAndroidシステム権限です。マイク権限は、システム音声を直接キャプチャできないデバイスで音声ミラーリングを有効にするために使用します。"
       ]
     },
     {
-      "question": "Q4. How do I enable or disable audio mirroring?",
+      "question": "Q4. 音声ミラーリングを有効または無効にするにはどうすればよいですか？",
       "answer": [
-        "Toggle Sound Mirroring before starting. Grant the mic permission when prompted. If you hear echo/noise, turn the toggle off to mirror video only."
+        "開始前にSound Mirroringを切り替えてください。求められたらマイク権限を許可します。エコーやノイズが聞こえる場合は、切り替えをオフにして映像のみをミラーリングしてください。"
       ]
     },
     {
-      "question": "Q5. Can I change resolution and frame rate?",
+      "question": "Q5. 解像度とフレームレートは変更できますか？",
       "answer": [
-        "Yes. Set these before starting. Higher resolution is sharper but needs more bandwidth; higher frame rate is smoother but uses more battery and network."
+        "はい。開始前に設定してください。解像度を高くするとより鮮明になりますが、より多くの帯域幅が必要です。フレームレートを高くするとより滑らかになりますが、バッテリーとネットワークの消費が増えます。"
       ]
     },
     {
-      "question": "Q6. My TV/device isn’t found. What should I do?",
+      "question": "Q6. テレビ/デバイスが見つかりません。どうすればよいですか？",
       "answer": [
-        "Check:",
-        "Phone and TV on the same Wi-Fi; VPN/proxy disabled.",
-        "Router AP/client isolation is off; prefer 5 GHz.",
-        "TV has casting mode enabled (AirPlay/Miracast, etc.).",
-        "Reboot router, TV, and phone, then rescan."
+        "以下を確認してください：",
+        "スマートフォンとテレビが同じWi‑Fiに接続されていること、VPN/プロキシが無効であること。",
+        "ルーターのAP/クライアント分離がオフであること。5 GHzの利用を推奨します。",
+        "テレビのキャストモード（AirPlay/Miracastなど）が有効であること。",
+        "ルーター、テレビ、スマートフォンを再起動してから、もう一度スキャンしてください。"
       ]
     },
     {
-      "question": "Q7. Connected but the TV is black/no picture.",
+      "question": "Q7. 接続済みですが、テレビが黒画面/映像が表示されません。",
       "answer": [
-        "Some apps block mirroring due to DRM or casting restrictions. Try other content (local media, photos, games) or another app that allows mirroring."
+        "一部のアプリはDRMやキャスト制限によりミラーリングをブロックします。別のコンテンツ（ローカルメディア、写真、ゲーム）や、ミラーリングを許可する別のアプリを試してください。"
       ]
     },
     {
-      "question": "Q8. I see video but no sound.",
+      "question": "Q8. 映像は表示されますが、音が出ません。",
       "answer": [
-        "Enable Sound Mirroring and grant the mic permission before starting. Check TV volume/mute. Some content blocks audio capture."
+        "開始前にSound Mirroringを有効にし、マイク権限を許可してください。テレビの音量/ミュートも確認してください。一部のコンテンツは音声キャプチャをブロックします。"
       ]
     },
     {
-      "question": "Q9. High delay or stutter—how to improve?",
+      "question": "Q9. 遅延やカクつきが大きい場合、どう改善できますか？",
       "answer": [
-        "Use 5 GHz Wi-Fi, move closer to the router, reduce other network usage, lower resolution or frame rate, close heavy background apps, and reboot the router if needed."
+        "5 GHz Wi‑Fiを使用し、ルーターに近づき、他のネットワーク利用を減らし、解像度またはフレームレートを下げ、重いバックグラウンドアプリを閉じてください。必要に応じてルーターを再起動してください。"
       ]
     },
     {
-      "question": "Q10. Why do I get a PIN/pairing prompt?",
+      "question": "Q10. PIN/ペアリングの確認が表示されるのはなぜですか？",
       "answer": [
-        "Some devices (e.g., AirPlay, certain TVs) require first‑time pairing. Enter the PIN shown on the TV or confirm on the TV screen."
+        "一部のデバイス（AirPlayや一部のテレビなど）は、初回にペアリングが必要です。テレビに表示されたPINを入力するか、テレビ画面で確認してください。"
       ]
     },
     {
-      "question": "Q11. How do I stop mirroring quickly?",
+      "question": "Q11. すばやくミラーリングを停止するには？",
       "answer": [
-        "Pull down the notification shade and tap Stop Mirroring, or tap Stop on the app’s main screen."
+        "通知シェードを下に引いてStop Mirroringをタップするか、アプリのメイン画面でStopをタップしてください。"
       ]
     },
     {
-      "question": "Q12. What happens when Wi-Fi is unavailable?",
+      "question": "Q12. Wi‑Fiが利用できない場合はどうなりますか？",
       "answer": [
-        "The app detects Wi-Fi status and guides you to connect to a network before scanning again."
+        "アプリはWi‑Fiの状態を検出し、再スキャンの前にネットワークへ接続するよう案内します。"
       ]
     },
     {
-      "question": "Q13. Do you store my screen content?",
+      "question": "Q13. 画面の内容は保存されますか？",
       "answer": [
-        "No. Mirroring data stays on your local network and is used only to cast to your TV. We don’t store or upload your screen."
+        "いいえ。ミラーリングデータはローカルネットワーク内に留まり、テレビへキャストするためだけに使用されます。画面内容を保存したりアップロードしたりすることはありません。"
       ]
     },
     {
-      "question": "Q14. Can I use other apps on my phone while mirroring?",
+      "question": "Q14. ミラーリング中にスマートフォンで他のアプリを使えますか？",
       "answer": [
-        "Yes, but DRM‑protected apps may block output. If you see throttling or lag, go to Home or lower quality and try again."
+        "はい。ただし、DRMで保護されたアプリは出力をブロックする場合があります。動作制限や遅延がある場合は、ホームに戻るか品質を下げて再試行してください。"
       ]
     },
     {
-      "question": "Q15. Does mirroring continue when the phone is locked?",
+      "question": "Q15. スマートフォンをロックしてもミラーリングは続きますか？",
       "answer": [
-        "Some devices lower frame rate or stop in lock/power‑saving modes. Keep the screen awake or disable aggressive battery optimizations."
+        "一部のデバイスでは、ロック中または省電力モード中にフレームレートが下がったり停止したりする場合があります。画面を点灯したままにするか、強力なバッテリー最適化を無効にしてください。"
       ]
     }
   ]
