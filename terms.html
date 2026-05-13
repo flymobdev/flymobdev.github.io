@@ -2,58 +2,188 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - TV Cast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>FlyMobile TV Apps - Terms of Use</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            background: #f5f7fb;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            line-height: 1.5;
+            color: #1e293b;
+            padding: 2rem 1rem;
+        }
+
+        .terms-card {
+            max-width: 880px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
         }
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+        .terms-inner {
+            padding: 2rem 1.75rem;
         }
+
         h1 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            color: #000;
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #1e293b, #2d3a4b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
+
+        .effective-date {
+            font-size: 0.85rem;
+            color: #5b6e8c;
+            border-left: 3px solid #facc15;
+            padding-left: 0.75rem;
+            margin: 0.75rem 0 1.5rem 0;
+        }
+
+        .welcome-text {
+            background: #f8fafc;
+            padding: 1rem 1.2rem;
+            border-radius: 20px;
+            margin: 1rem 0 1.8rem 0;
+            border: 1px solid #e9edf2;
+            font-size: 1rem;
+            color: #0f172a;
+        }
+
+        .welcome-text strong {
+            color: #0f2b3d;
+            font-weight: 700;
+            background: #eef2ff;
+            padding: 0.1rem 0.3rem;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
         h2 {
-            margin-top: 30px;
-            color: #444;
+            font-size: 1.45rem;
+            font-weight: 600;
+            margin-top: 1.8rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 2px solid #eef2ff;
+            color: #0f2b3d;
         }
-        p, li {
-            margin-bottom: 10px;
+
+        ul {
+            margin: 0.75rem 0 0.5rem 1.5rem;
+            list-style-type: none;
         }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
-            color: #666;
+
+        li {
+            margin-bottom: 0.65rem;
+            position: relative;
+            padding-left: 1.3rem;
         }
+
+        li::before {
+            content: "•";
+            color: #facc15;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -0.1rem;
+        }
+
         a {
-            color: #007aff;
+            color: #2563eb;
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s, border-bottom 0.2s;
+            border-bottom: 1px solid transparent;
         }
+
         a:hover {
-            text-decoration: underline;
+            color: #1e40af;
+            border-bottom-color: #2563eb;
+        }
+
+        .footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eef2ff;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            font-weight: 500;
+        }
+
+        .mail-link {
+            background: #f1f5f9;
+            padding: 0.2rem 0.7rem;
+            border-radius: 40px;
+            display: inline-block;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .terms-inner {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.65rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .welcome-text {
+                padding: 0.8rem 1rem;
+            }
+            li {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0.2in;
+            }
+            .terms-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+            a {
+                text-decoration: underline;
+                color: black;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Terms of Service</h1>
-        <p><em>Last updated: February 12, 2026</em></p>
-        
-        <p>Welcome to <strong>TV Cast</strong> (“the App”). By using our App, you agree to the following terms:</p>
+<div class="terms-card">
+    <div class="terms-inner">
+        <h1>Terms of Use</h1>
+        <div class="effective-date">📅 Last updated: May 13, 2026 • Effective immediately</div>
+
+        <div class="welcome-text">
+            <p>Welcome to <strong>TV Remote、TV Cast、TV Mirror，TV-type products within the FlyMobile developer account</strong> (“the App”). By using our App, you agree to the following terms:</p>
+        </div>
 
         <h2>1. Use of Service</h2>
         <ul>
@@ -87,9 +217,15 @@
         </ul>
 
         <div class="footer">
-            <p>For more information, please visit our website: <a href="https://flymobdev.github.io/">https://flymobdev.github.io/</a></p>
-            <p>If you have any questions, please contact us at: <strong><a href="mailto:sgflymob@gmail.com">sgflymob@gmail.com</a></strong></p>
+            <p>📡 For more information, please visit our website: <br/>
+                <a href="https://flymobdev.github.io/" target="_blank" rel="noopener noreferrer">https://flymobdev.github.io/</a>
+            </p>
+            <p>✉️ If you have any questions, please contact us at: <br/>
+                <strong><a href="mailto:sgflymob@gmail.com" class="mail-link">sgflymob@gmail.com</a></strong>
+            </p>
+            <p style="font-size: 0.75rem; margin-top: 1rem;">© 2026 FlyMobile. All rights reserved.</p>
         </div>
     </div>
+</div>
 </body>
 </html>
