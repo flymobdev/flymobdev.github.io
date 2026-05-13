@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>FAQ</title>
+    <style>
+      :root {
+        --bg-color: #24292e;
+        --text-color: #ffffff;
+        --item-bg-color: rgba(255, 255, 255, 0.06);
+        --list-dot-color: #52a8ff;
+      }
+      body {
+        font-family: Roboto, Arial, sans-serif;
+        background: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 16px;
+      }
+
+      a {
+        color: var(--list-dot-color);
+        -webkit-tap-highlight-color: transparent;
+      }
+      #faq {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .faq-item {
+        background-color: var(--item-bg-color);
+        padding: 20px 16px;
+        border-radius: 10px;
+      }
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        line-height: 1;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .faq-question:active {
+        background-color: transparent;
+      }
+
+      .faq-question > svg {
+        flex: none;
+        transform: rotate(180deg);
+        transition: transform 0.2s ease;
+      }
+
+      .faq-question.active > svg {
+        transform: rotate(0deg);
+      }
+
+      .faq-answer {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.2s ease;
+      }
+      .faq-answer ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 24px 0 0 0;
+      }
+      .faq-answer li {
+        position: relative;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1;
+        list-style: none;
+        padding-left: 16px;
+      }
+      .faq-answer li::before {
+        content: '';
+        background-color: var(--list-dot-color);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+      .faq-answer li.no-dot::before {
+        display: none;
+      }
+      .error-message {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #ffebee;
+        border-left: 4px solid #f44336;
+        border-radius: 5px;
+        color: #b71c1c;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <symbol id="arrow-icon" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="14" fill="white" fill-opacity="0.06" />
+          <path
+            d="M18.9497 15.8872L14 10.9375L9.05025 15.8872"
+            stroke="#52A8FF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <div id="faq"></div>
+    <script>
+      // FAQ JSON URL
+      const baseUrl = '/faq/lang';
+
+      const showError = message => {
+        const faqContainer = document.getElementById('faq');
+        faqContainer.innerHTML = `<div class="error-message">${message}</div>`;
+      };
+
+      const getQueryParam = param => {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param) || 'en'; // 默认返回'en'
+      };
+
+      const getFAQData = async (callback, fallback = false) => {
+        const lang = getQueryParam('hl');
+        const url = `${baseUrl}/${fallback ? 'en' : lang}.json`;
+
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error('Network Error');
+          }
+          const data = await response.json();
+          callback(null, data);
+        } catch (error) {
+          callback(error);
+        }
+      };
+
+      const renderFAQ = data => {
+        const faqContainer = document.getElementById('faq');
+        let html = '';
+
+        data.faqs.forEach(faq => {
+          html += `<div class="faq-item">`;
+          html += `<div class="faq-question">
+           <span>${faq.question}</span>
+            <svg width="28" height="28">
+              <use href="#arrow-icon"/>
+            </svg>
+          </div>`;
+          html += '<div class="faq-answer"><ul>';
+          faq.answer.forEach(answer => {
+            const hasMailto = answer.includes('mailto:');
+            html += `<li class="${hasMailto ? 'no-dot' : ''}">${answer}</li>`;
+          });
+          html += '</ul></div>';
+          html += '</div>';
+        });
+
+        faqContainer.innerHTML = html;
+        addClickHandlers();
+      };
+
+      const addClickHandlers = () => {
+        const questions = document.getElementsByClassName('faq-question');
+        Array.from(questions).forEach(question => {
+          question.addEventListener('click', function () {
+            const answer = this.nextElementSibling;
+            const isActive = this.classList.contains('active');
+
+            if (!isActive) {
+              // 展开前先设置实际高度
+              answer.style.height = answer.scrollHeight + 'px';
+            } else {
+              // 收起前先设置实际高度
+              answer.style.height = answer.scrollHeight + 'px';
+              // 强制重绘
+              answer.offsetHeight;
+              answer.style.height = '0';
+            }
+
+            this.classList.toggle('active');
+          });
+        });
+      };
+
+      window.onload = () => {
+        getFAQData((error, data) => {
+          if (error) {
+            getFAQData((e, data) => {
+              renderFAQ(data);
+            }, true);
+            return;
+          }
+          renderFAQ(data);
+        });
+      };
+    </script>
+  </body>
+</html>
