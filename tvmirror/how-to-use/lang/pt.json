@@ -1,0 +1,55 @@
+{
+  "lang": "pt",
+  "title": "TV Mirror - Como usar",
+  "sections": [
+    {
+      "title": "Antes de começar",
+      "items": [
+        "Conecte seu telefone e sua TV/dispositivo de streaming à mesma rede Wi‑Fi (mesmo roteador e sub-rede).",
+        "Ligue a TV e mantenha-a na tela inicial. Verifique se o Chromecast/TV stick está ligado.",
+        "Desative VPN/proxy no telefone. Para streaming mais suave, use uma banda Wi‑Fi de 5 GHz."
+      ]
+    },
+    {
+      "title": "Início rápido",
+      "listType": "ol",
+      "items": [
+        "Abra o TV Mirror. O app verifica automaticamente TVs e dispositivos de transmissão próximos.",
+        "Selecione seu dispositivo (Chromecast, TV AirPlay/Apple TV, TV LG webOS ou dispositivo compatível com Miracast).",
+        "Escolha a qualidade do espelhamento: resolução e taxa de quadros (por exemplo, 720p/30 fps para equilíbrio).",
+        "Para espelhar áudio, ative Sound Mirroring. No primeiro uso, conceda a permissão de Microfone.",
+        "Toque em Start Mirroring. Aprove a solicitação de permissão “Captura de tela” do Android.",
+        "Sua tela aparecerá na TV. Use a tela principal ou a barra de notificações para pausar/parar."
+      ]
+    },
+    {
+      "title": "Dicas por dispositivo",
+      "items": [
+        {
+          "label": "Chromecast/Google TV:",
+          "text": "Garanta que esteja na mesma rede Wi‑Fi. Se for solicitado emparelhar ou inserir um PIN, confirme na TV."
+        },
+        {
+          "label": "AirPlay (Apple TV/TVs AirPlay 2):",
+          "text": "Verifique se o AirPlay está ativado na TV. Insira o PIN exibido na tela se solicitado."
+        },
+        {
+          "label": "TV LG webOS:",
+          "text": "Mantenha a TV na mesma rede e permita conexões de dispositivos móveis. Aceite o emparelhamento na primeira conexão."
+        },
+        {
+          "label": "Dispositivos Miracast:",
+          "text": "Ative “Tela sem fio/Compartilhamento de tela” na TV e depois selecione o dispositivo no TV Mirror."
+        }
+      ]
+    },
+    {
+      "title": "Controles e ajustes",
+      "items": [
+        "Inicie/Pare/Reconecte pela tela principal.",
+        "Use Quick Stop pela barra de notificações.",
+        "Para alterar a resolução ou a taxa de quadros, pare o espelhamento primeiro, ajuste e reconecte."
+      ]
+    }
+  ]
+}

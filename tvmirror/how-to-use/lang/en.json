@@ -1,0 +1,55 @@
+{
+  "lang": "en",
+  "title": "TV Mirror - How to use",
+  "sections": [
+    {
+      "title": "Before you start",
+      "items": [
+        "Connect your phone and TV/streaming device to the same Wi‑Fi network (same router and subnet).",
+        "Turn on the TV and keep it on the home screen. Make sure Chromecast/TV stick is powered.",
+        "Turn off VPN/proxy on your phone. For smoother streaming, use a 5 GHz Wi‑Fi band."
+      ]
+    },
+    {
+      "title": "Quick start",
+      "listType": "ol",
+      "items": [
+        "Open TV Mirror. The app scans nearby TVs and casting devices automatically.",
+        "Select your device (Chromecast, AirPlay TV/Apple TV, LG webOS TV, or Miracast‑compatible device).",
+        "Choose mirroring quality: resolution and frame rate (e.g., 720p/30 fps for balance).",
+        "To mirror audio, enable Sound Mirroring. On first use, grant Microphone permission.",
+        "Tap Start Mirroring. Approve the Android “Screen capture” permission prompt.",
+        "Your screen appears on the TV. Use the main screen or the notification toolbar to pause/stop."
+      ]
+    },
+    {
+      "title": "Device‑specific tips",
+      "items": [
+        {
+          "label": "Chromecast/Google TV:",
+          "text": "Ensure the same Wi‑Fi. If asked to pair or enter a PIN, confirm on the TV."
+        },
+        {
+          "label": "AirPlay (Apple TV/AirPlay 2 TVs):",
+          "text": "Make sure AirPlay is enabled on the TV. Enter the on‑screen PIN if prompted."
+        },
+        {
+          "label": "LG webOS TV:",
+          "text": "Keep TV on the same network and allow connections from mobile devices. Accept pairing on first connect."
+        },
+        {
+          "label": "Miracast devices:",
+          "text": "Enable “Wireless display/Screen share” on the TV, then pick it in TV Mirror."
+        }
+      ]
+    },
+    {
+      "title": "Controls and tweaks",
+      "items": [
+        "Start/Stop/Reconnect from the main screen.",
+        "Quick Stop from the notification toolbar.",
+        "To change resolution or frame rate, stop mirroring first, adjust, then reconnect."
+      ]
+    }
+  ]
+}

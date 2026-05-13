@@ -25,7 +25,7 @@
         padding: 16px;
       }
 
-      main {
+      #guide {
         max-width: 800px;
         margin: 0 auto;
         display: flex;
@@ -87,51 +87,108 @@
         color: var(--text-color);
         font-weight: 600;
       }
+
+      .error-message {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #ffebee;
+        border-left: 4px solid #f44336;
+        border-radius: 5px;
+        color: #b71c1c;
+      }
     </style>
   </head>
   <body>
-    <main>
-      <h1 class="page-title">TV Mirror - How to use</h1>
+    <main id="guide"></main>
 
-      <section class="guide-section">
-        <h2>Before you start</h2>
-        <ul>
-          <li>Connect your phone and TV/streaming device to the same Wi‑Fi network (same router and subnet).</li>
-          <li>Turn on the TV and keep it on the home screen. Make sure Chromecast/TV stick is powered.</li>
-          <li>Turn off VPN/proxy on your phone. For smoother streaming, use a 5 GHz Wi‑Fi band.</li>
-        </ul>
-      </section>
+    <script>
+      const baseUrl = '/tvmirror/how-to-use/lang';
 
-      <section class="guide-section">
-        <h2>Quick start</h2>
-        <ol>
-          <li>Open TV Mirror. The app scans nearby TVs and casting devices automatically.</li>
-          <li>Select your device (Chromecast, AirPlay TV/Apple TV, LG webOS TV, or Miracast‑compatible device).</li>
-          <li>Choose mirroring quality: resolution and frame rate (e.g., 720p/30 fps for balance).</li>
-          <li>To mirror audio, enable Sound Mirroring. On first use, grant Microphone permission.</li>
-          <li>Tap Start Mirroring. Approve the Android “Screen capture” permission prompt.</li>
-          <li>Your screen appears on the TV. Use the main screen or the notification toolbar to pause/stop.</li>
-        </ol>
-      </section>
+      const showError = message => {
+        const guideContainer = document.getElementById('guide');
+        guideContainer.innerHTML = `<div class="error-message">${message}</div>`;
+      };
 
-      <section class="guide-section">
-        <h2>Device‑specific tips</h2>
-        <ul>
-          <li><strong>Chromecast/Google TV:</strong> Ensure the same Wi‑Fi. If asked to pair or enter a PIN, confirm on the TV.</li>
-          <li><strong>AirPlay (Apple TV/AirPlay 2 TVs):</strong> Make sure AirPlay is enabled on the TV. Enter the on‑screen PIN if prompted.</li>
-          <li><strong>LG webOS TV:</strong> Keep TV on the same network and allow connections from mobile devices. Accept pairing on first connect.</li>
-          <li><strong>Miracast devices:</strong> Enable “Wireless display/Screen share” on the TV, then pick it in TV Mirror.</li>
-        </ul>
-      </section>
+      const getQueryParam = param => {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param) || 'en';
+      };
 
-      <section class="guide-section">
-        <h2>Controls and tweaks</h2>
-        <ul>
-          <li>Start/Stop/Reconnect from the main screen.</li>
-          <li>Quick Stop from the notification toolbar.</li>
-          <li>To change resolution or frame rate, stop mirroring first, adjust, then reconnect.</li>
-        </ul>
-      </section>
-    </main>
+      const getGuideData = async (callback, fallback = false) => {
+        const lang = getQueryParam('hl');
+        const url = `${baseUrl}/${fallback ? 'en' : lang}.json`;
+
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error('Network Error');
+          }
+          const data = await response.json();
+          callback(null, data);
+        } catch (error) {
+          callback(error);
+        }
+      };
+
+      const renderItem = (list, item) => {
+        const li = document.createElement('li');
+
+        if (typeof item === 'string') {
+          li.textContent = item;
+        } else {
+          const label = document.createElement('strong');
+          label.textContent = item.label;
+          li.appendChild(label);
+          li.append(` ${item.text}`);
+        }
+
+        list.appendChild(li);
+      };
+
+      const renderGuide = data => {
+        document.documentElement.lang = data.lang || getQueryParam('hl');
+        document.title = data.title;
+
+        const guideContainer = document.getElementById('guide');
+        guideContainer.replaceChildren();
+
+        const title = document.createElement('h1');
+        title.className = 'page-title';
+        title.textContent = data.title;
+        guideContainer.appendChild(title);
+
+        data.sections.forEach(section => {
+          const sectionEl = document.createElement('section');
+          sectionEl.className = 'guide-section';
+
+          const heading = document.createElement('h2');
+          heading.textContent = section.title;
+          sectionEl.appendChild(heading);
+
+          const list = document.createElement(section.listType === 'ol' ? 'ol' : 'ul');
+          section.items.forEach(item => renderItem(list, item));
+          sectionEl.appendChild(list);
+
+          guideContainer.appendChild(sectionEl);
+        });
+      };
+
+      window.onload = () => {
+        getGuideData((error, data) => {
+          if (error) {
+            getGuideData((e, data) => {
+              if (e) {
+                showError('Unable to load content.');
+                return;
+              }
+              renderGuide(data);
+            }, true);
+            return;
+          }
+          renderGuide(data);
+        });
+      };
+    </script>
   </body>
 </html>

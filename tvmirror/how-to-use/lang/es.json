@@ -1,0 +1,55 @@
+{
+  "lang": "es",
+  "title": "TV Mirror - Cómo usarlo",
+  "sections": [
+    {
+      "title": "Antes de empezar",
+      "items": [
+        "Conecta tu teléfono y tu TV/dispositivo de streaming a la misma red Wi‑Fi (mismo router y subred).",
+        "Enciende la TV y mantenla en la pantalla de inicio. Asegúrate de que el Chromecast/TV stick esté encendido.",
+        "Desactiva la VPN/proxy en tu teléfono. Para una transmisión más fluida, usa una banda Wi‑Fi de 5 GHz."
+      ]
+    },
+    {
+      "title": "Inicio rápido",
+      "listType": "ol",
+      "items": [
+        "Abre TV Mirror. La app escanea automáticamente TVs y dispositivos de transmisión cercanos.",
+        "Selecciona tu dispositivo (Chromecast, TV AirPlay/Apple TV, TV LG webOS o dispositivo compatible con Miracast).",
+        "Elige la calidad de duplicación: resolución y velocidad de fotogramas (por ejemplo, 720p/30 fps para un buen equilibrio).",
+        "Para duplicar audio, activa Sound Mirroring. En el primer uso, concede el permiso de Micrófono.",
+        "Toca Start Mirroring. Aprueba el aviso de permiso de Android “Captura de pantalla”.",
+        "Tu pantalla aparecerá en la TV. Usa la pantalla principal o la barra de notificaciones para pausar/detener."
+      ]
+    },
+    {
+      "title": "Consejos por dispositivo",
+      "items": [
+        {
+          "label": "Chromecast/Google TV:",
+          "text": "Asegúrate de usar la misma red Wi‑Fi. Si se solicita emparejar o introducir un PIN, confirma en la TV."
+        },
+        {
+          "label": "AirPlay (Apple TV/TVs AirPlay 2):",
+          "text": "Asegúrate de que AirPlay esté activado en la TV. Introduce el PIN en pantalla si se solicita."
+        },
+        {
+          "label": "TV LG webOS:",
+          "text": "Mantén la TV en la misma red y permite conexiones desde dispositivos móviles. Acepta el emparejamiento en la primera conexión."
+        },
+        {
+          "label": "Dispositivos Miracast:",
+          "text": "Activa “Pantalla inalámbrica/Compartir pantalla” en la TV y luego selecciónala en TV Mirror."
+        }
+      ]
+    },
+    {
+      "title": "Controles y ajustes",
+      "items": [
+        "Inicia/Detén/Reconecta desde la pantalla principal.",
+        "Usa Quick Stop desde la barra de notificaciones.",
+        "Para cambiar la resolución o la velocidad de fotogramas, detén primero la duplicación, ajusta la configuración y vuelve a conectar."
+      ]
+    }
+  ]
+}
