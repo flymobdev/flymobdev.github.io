@@ -1,44 +1,196 @@
-<h2><strong>Privacy Policy</strong></h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Privacy Policy - TV Remote, TV Cast, TV Mirror</title>
+    <style>
+        /* ----- 全局重置 & 基础样式 ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<p>IceAge Inc is committed to protecting your privacy. This Privacy Policy explains how we collect and use your information through our mobile applications ("TV Remote, TV Cast, TV Mirror").</p>
+        /* 用户指定背景色: #A888B5 (紫褐色调) */
+        body {
+            background-color: #A888B5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.55;
+            color: #1e2a3e;
+            padding: 2rem 1rem;
+        }
 
-<p>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.</p>
+        /* 隐私政策主卡片：白色背景，阅读舒适 */
+        .privacy-card {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
 
-<p>If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. we will not use or share your information with anyone except as described in this Privacy Policy.</p>
+        .privacy-inner {
+            padding: 2.2rem 2rem;
+        }
 
-<p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at "TV Remote, TV Cast, TV Mirror", unless otherwise defined in this Privacy Policy.</p>
+        /* 标题排版 */
+        h1, h2 {
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            color: #0f2b3d;
+        }
 
-<p>The Privacy Policy applies to TV Remote ("TV Remote") and unless specified, its subsidiaries, including TV Remote, TV Cast, TV Mirror, TV-type products within the FlyMobile developer account and any contractors, representatives, agents, and resellers while they are working on our behalf (collectively "we," "us" or "our").</p>
+        /* 将原本的 h2 样式统一处理，同时保留 strong 但无碍 */
+        h2 {
+            font-size: 1.65rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #f0e9f4;
+        }
 
-<h2>Information Collection and Use</h2>
-<p>For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to device type, operating system version and type, unique identifiers (such as iOS Advertising ID), carrier, and other related information (through methods such as mobile “SDKs”) for that device. We may collect and share precise these information, through methods such as mobile “SDKs”. These information may be used by itself, aggregated, or combined with mobile identifiers (such as Android IDs), and shared with third parties, for purposes related to advertising, attribution (measuring ad performance) analytics and research. (Google Admob, Google Firebase).</p>
+        /* 第一个主标题（Privacy Policy）特殊处理，更突出 */
+        .privacy-inner > h2:first-of-type {
+            margin-top: 0;
+            font-size: 2rem;
+            border-bottom: 3px solid #A888B5;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1.2rem;
+        }
 
-<p>The app does use third party services that may collect information used to identify you.</p>
+        /* 段落样式 */
+        p {
+            margin-bottom: 1rem;
+            color: #2c3f55;
+            font-size: 1rem;
+        }
 
-<h2>Log Data</h2>
-<p>We want to inform you that whenever you use our Service, in case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your devices’s Internet Protocol (“IP”) address, device name, operating system version, configuration of the app when utilising our Service, the time and date of your use of the Service, and other statistics.</p>
+        /* 列表样式 (继承原有点号风格，但保持干净) */
+        ul {
+            margin: 0.75rem 0 1rem 1.8rem;
+            list-style-type: disc;
+        }
 
-<h2>Service Providers</h2>
-<p>We may employ third-party companies and individuals due to the following reasons:</p>
-<ul>
-  <li>To facilitate our Service;</li>
-  <li>To provide the Service on our behalf;</li>
-  <li>To perform Service-related services; or</li>
-  <li>To assist us in analysing how our service is used.</li>
-</ul>
-<p>We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+        li {
+            margin-bottom: 0.5rem;
+            color: #2c3f55;
+        }
 
-<h2>Security</h2>
-<p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+        /* 链接样式 */
+        a {
+            color: #6b3e8c;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
 
-<h2>Links to Other Sites</h2>
-<p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+        a:hover {
+            color: #3b2352;
+            border-bottom-color: #A888B5;
+        }
 
-<h2>Children’s Privacy</h2>
-<p>This Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
+        /* 邮件地址内联轻背景（可选） */
+        .mail-highlight {
+            background: #f8f2fc;
+            padding: 0.1rem 0.4rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 500;
+        }
 
-<h2>Changes to This Privacy Policy</h2>
-<p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. These changes are effective immediately, after they are posted on this page.</p>
+        /* 响应式调整 */
+        @media (max-width: 680px) {
+            body {
+                padding: 1rem;
+            }
+            .privacy-inner {
+                padding: 1.5rem;
+            }
+            h2 {
+                font-size: 1.45rem;
+            }
+            .privacy-inner > h2:first-of-type {
+                font-size: 1.8rem;
+            }
+            p, li {
+                font-size: 0.95rem;
+            }
+        }
 
-<h2>Contact Us</h2>
-<p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:sgflymob@gmail.com">sgflymob@gmail.com</a></p>
+        /* 打印优化 */
+        @media print {
+            body {
+                background: white;
+                padding: 0.2in;
+            }
+            .privacy-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+            }
+            a {
+                text-decoration: underline;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="privacy-card">
+    <div class="privacy-inner">
+        <!-- 以下内容完全忠实于提供的 Privacy Policy 文本，保留原始HTML结构与措辞 -->
+        <h2><strong>Privacy Policy</strong></h2>
+
+        <p>IceAge Inc is committed to protecting your privacy. This Privacy Policy explains how we collect and use your information through our mobile applications ("TV Remote, TV Cast, TV Mirror").</p>
+
+        <p>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.</p>
+
+        <p>If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. we will not use or share your information with anyone except as described in this Privacy Policy.</p>
+
+        <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at "TV Remote, TV Cast, TV Mirror", unless otherwise defined in this Privacy Policy.</p>
+
+        <p>The Privacy Policy applies to TV Remote ("TV Remote") and unless specified, its subsidiaries, including TV Remote, TV Cast, TV Mirror, TV-type products within the FlyMobile developer account and any contractors, representatives, agents, and resellers while they are working on our behalf (collectively "we," "us" or "our").</p>
+
+        <h2>Information Collection and Use</h2>
+        <p>For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to device type, operating system version and type, unique identifiers (such as iOS Advertising ID), carrier, and other related information (through methods such as mobile “SDKs”) for that device. We may collect and share precise these information, through methods such as mobile “SDKs”. These information may be used by itself, aggregated, or combined with mobile identifiers (such as Android IDs), and shared with third parties, for purposes related to advertising, attribution (measuring ad performance) analytics and research. (Google Admob, Google Firebase).</p>
+
+        <p>The app does use third party services that may collect information used to identify you.</p>
+
+        <h2>Log Data</h2>
+        <p>We want to inform you that whenever you use our Service, in case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your devices’s Internet Protocol (“IP”) address, device name, operating system version, configuration of the app when utilising our Service, the time and date of your use of the Service, and other statistics.</p>
+
+        <h2>Service Providers</h2>
+        <p>We may employ third-party companies and individuals due to the following reasons:</p>
+        <ul>
+            <li>To facilitate our Service;</li>
+            <li>To provide the Service on our behalf;</li>
+            <li>To perform Service-related services; or</li>
+            <li>To assist us in analysing how our service is used.</li>
+        </ul>
+        <p>We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+
+        <h2>Security</h2>
+        <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+
+        <h2>Links to Other Sites</h2>
+        <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+
+        <h2>Children’s Privacy</h2>
+        <p>This Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
+
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. These changes are effective immediately, after they are posted on this page.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:sgflymob@gmail.com" class="mail-highlight">sgflymob@gmail.com</a></p>
+    </div>
+</div>
+
+</body>
+</html>
