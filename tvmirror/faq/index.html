@@ -132,7 +132,7 @@
 
       const getQueryParam = param => {
         const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param) || 'en'; // 默认返回'en'
+        return urlParams.get(param) || 'en';
       };
 
       const getFAQData = async (callback, fallback = false) => {
@@ -184,12 +184,9 @@
             const isActive = this.classList.contains('active');
 
             if (!isActive) {
-              // 展开前先设置实际高度
               answer.style.height = answer.scrollHeight + 'px';
             } else {
-              // 收起前先设置实际高度
               answer.style.height = answer.scrollHeight + 'px';
-              // 强制重绘
               answer.offsetHeight;
               answer.style.height = '0';
             }

@@ -3,161 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <title>How to use</title>
+    <title>TV Mirror - How to use</title>
     <style>
       :root {
         --bg-color: #24292e;
         --text-color: #ffffff;
+        --muted-text-color: rgba(255, 255, 255, 0.72);
         --item-bg-color: rgba(255, 255, 255, 0.06);
+        --list-dot-color: #52a8ff;
       }
-      html,
-      body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
+
+      * {
+        box-sizing: border-box;
       }
+
       body {
         font-family: Roboto, Arial, sans-serif;
         background: var(--bg-color);
         color: var(--text-color);
+        margin: 0;
+        padding: 16px;
       }
-      #device-list {
+
+      main {
         max-width: 800px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        padding: 16px;
+        gap: 12px;
       }
-      .device-item {
+
+      .page-title {
+        margin: 4px 0 8px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .guide-section {
         background-color: var(--item-bg-color);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-        border-radius: 10px;
         padding: 20px 16px;
+        border-radius: 10px;
       }
 
-      .device-item img {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-      }
-
-      .device-info {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .device-name {
-        font-weight: 600;
+      .guide-section h2 {
+        margin: 0;
         font-size: 17px;
-        line-height: 1;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .guide-section ul,
+      .guide-section ol {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 20px 0 0;
+      }
+
+      .guide-section li {
+        position: relative;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.35;
+        color: var(--muted-text-color);
+        list-style: none;
+        padding-left: 16px;
+      }
+
+      .guide-section li::before {
+        content: '';
+        background-color: var(--list-dot-color);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 7px;
+      }
+
+      .guide-section strong {
         color: var(--text-color);
+        font-weight: 600;
       }
     </style>
   </head>
   <body>
-    <svg width="0" height="0" style="position: absolute">
-      <defs>
-        <symbol id="play-icon" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM10.6289 7.24902C9.71474 6.72123 8.57158 7.38103 8.57129 8.43652V15.5635C8.57158 16.619 9.71474 17.2788 10.6289 16.751L16.7998 13.1875C17.7141 12.6596 17.7141 11.3404 16.7998 10.8125L10.6289 7.24902Z"
-            fill="white"
-          />
-        </symbol>
-      </defs>
-    </svg>
-    <div id="device-list"></div>
-    <template id="device-item-template">
-      <div class="device-item">
-        <div class="device-info">
-          <img src="" alt="" />
-          <span class="device-name"></span>
-        </div>
-        <svg width="24" height="24">
-          <use href="#play-icon"></use>
-        </svg>
-      </div>
-    </template>
+    <main>
+      <h1 class="page-title">TV Mirror - How to use</h1>
 
-    <script>
-      (() => {
-        const videoData = [
-          {
-            name: 'Sony',
-            link: 'https://youtube.com/shorts/ahCSZW4XTkg?feature=share',
-            logo: 'pic_sony',
-          },
-          {
-            name: 'Samsung',
-            link: 'https://youtube.com/shorts/juYUfAGKYEw?feature=share',
-            logo: 'pic_samsung',
-          },
-          {
-            name: 'Roku',
-            link: 'https://youtube.com/shorts/b1Nx35rhCIA?feature=share',
-            logo: 'pic_roku',
-          },
-          {
-            name: 'Philips',
-            link: 'https://youtube.com/shorts/qvPVdpUbn5A?feature=share',
-            logo: 'pic_philips',
-          },
-          {
-            name: 'LG',
-            link: 'https://youtube.com/shorts/Y9zrT9j6r3g?feature=share',
-            logo: 'pic_lg',
-          },
-          {
-            name: 'Hisense',
-            link: 'https://youtube.com/shorts/9WgBTggfUUo?feature=share',
-            logo: 'pic_hisense',
-          },
-          {
-            name: 'Fire TV',
-            link: 'https://youtube.com/shorts/j7HYQ3oMcZ8?feature=share',
-            logo: 'pic_firetv',
-          },
-          {
-            name: 'Android TV',
-            link: 'https://youtube.com/shorts/zXS1W8c-K2M?feature=share',
-            logo: 'pic_android',
-          },
-          {
-            name: 'Others',
-            link: 'https://youtube.com/shorts/858aKEniYQQ?feature=share',
-            logo: 'pic_other',
-          },
-        ];
+      <section class="guide-section">
+        <h2>Before you start</h2>
+        <ul>
+          <li>Connect your phone and TV/streaming device to the same Wi‑Fi network (same router and subnet).</li>
+          <li>Turn on the TV and keep it on the home screen. Make sure Chromecast/TV stick is powered.</li>
+          <li>Turn off VPN/proxy on your phone. For smoother streaming, use a 5 GHz Wi‑Fi band.</li>
+        </ul>
+      </section>
 
-        const deviceList = document.getElementById('device-list');
-        const deviceItemTemplate = document.getElementById('device-item-template');
-        videoData.forEach(item => {
-          const cloneEl = deviceItemTemplate.content.cloneNode(true);
-          const deviceItem = cloneEl.querySelector('.device-item');
-          deviceItem.addEventListener('click', () => {
-            if (window.external && window.external.playYouTube) {
-              window.external.playYouTube(item.link);
-            } else {
-              window.location.href = item.link;
-            }
-          });
+      <section class="guide-section">
+        <h2>Quick start</h2>
+        <ol>
+          <li>Open TV Mirror. The app scans nearby TVs and casting devices automatically.</li>
+          <li>Select your device (Chromecast, AirPlay TV/Apple TV, LG webOS TV, or Miracast‑compatible device).</li>
+          <li>Choose mirroring quality: resolution and frame rate (e.g., 720p/30 fps for balance).</li>
+          <li>To mirror audio, enable Sound Mirroring. On first use, grant Microphone permission.</li>
+          <li>Tap Start Mirroring. Approve the Android “Screen capture” permission prompt.</li>
+          <li>Your screen appears on the TV. Use the main screen or the notification toolbar to pause/stop.</li>
+        </ol>
+      </section>
 
-          const img = cloneEl.querySelector('img');
-          img.src = `./images/${item.logo}.webp`;
-          img.alt = item.name;
+      <section class="guide-section">
+        <h2>Device‑specific tips</h2>
+        <ul>
+          <li><strong>Chromecast/Google TV:</strong> Ensure the same Wi‑Fi. If asked to pair or enter a PIN, confirm on the TV.</li>
+          <li><strong>AirPlay (Apple TV/AirPlay 2 TVs):</strong> Make sure AirPlay is enabled on the TV. Enter the on‑screen PIN if prompted.</li>
+          <li><strong>LG webOS TV:</strong> Keep TV on the same network and allow connections from mobile devices. Accept pairing on first connect.</li>
+          <li><strong>Miracast devices:</strong> Enable “Wireless display/Screen share” on the TV, then pick it in TV Mirror.</li>
+        </ul>
+      </section>
 
-          const deviceName = cloneEl.querySelector('.device-name');
-          deviceName.textContent = item.name;
-
-          deviceList.appendChild(cloneEl);
-        });
-        deviceItemTemplate.remove();
-      })();
-    </script>
+      <section class="guide-section">
+        <h2>Controls and tweaks</h2>
+        <ul>
+          <li>Start/Stop/Reconnect from the main screen.</li>
+          <li>Quick Stop from the notification toolbar.</li>
+          <li>To change resolution or frame rate, stop mirroring first, adjust, then reconnect.</li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
