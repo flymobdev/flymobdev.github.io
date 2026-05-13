@@ -1,63 +1,97 @@
 {
   "faqs": [
     {
-      "question": "Question 1: The app shows that it can't connect to the TV's Wi-Fi network. What should I do?",
+      "question": "Q1. What devices/protocols are supported?",
       "answer": [
-        "Check whether the TV and the mobile phone are connected to the same Wi-Fi network.",
-        "Confirm if the Wi-Fi network is working properly. You can try connecting other devices for a test.",
-        "Restart the TV and the router. Sometimes this can solve the connection problem."
+        "Chromecast, AirPlay (Apple TV/AirPlay 2‑compatible TVs), LG webOS TVs, and most Miracast‑compatible devices. Phone and TV must share the same Wi‑Fi."
       ]
     },
     {
-      "question": "Question 2: The app can connect to Wi-Fi but fails to control the TV functions. What's the reason?",
+      "question": "Q2. Do phone and TV have to be on the same Wi-Fi?",
       "answer": [
-        "Ensure that the app has been updated to the latest version. Older versions may have compatibility issues.",
-        "Check if the TV system needs to be updated to support the control functions of the app.",
-        "It might be that the control permissions of the TV are not set correctly in the app. Log in to the app again and check the permission settings."
+        "Yes. Discovery and casting require the same router/subnet. Hotspots or client‑isolation networks may block discovery."
       ]
     },
     {
-      "question": "Question 3: When the app is connected to Wi-Fi to control the TV, it responds slowly or gets stuck. How to solve it?",
+      "question": "Q3. Why do you request Screen Capture and Microphone permissions?",
       "answer": [
-        "Check the network bandwidth. Heavy usage of the network by other devices might cause lag. Pause the heavy traffic usage of other devices.",
-        "Clear the memory of the mobile phone and the cache of the TV to release system resources.",
-        "Try reinstalling the app and restarting the TV."
+        "Screen Capture is the Android system authorization to mirror your display. Microphone permission enables audio mirroring on devices where system audio can’t be captured directly."
       ]
     },
     {
-      "question": "Question 4: I forgot the Wi-Fi password of the TV and can't connect. How to retrieve it?",
+      "question": "Q4. How do I enable or disable audio mirroring?",
       "answer": [
-        "You can view the password information of the connected devices on the router management page.",
-        "If the router supports the WPS button connection, you can directly pair via the WPS connection function on the mobile phone app without entering the password."
+        "Toggle Sound Mirroring before starting. Grant the mic permission when prompted. If you hear echo/noise, turn the toggle off to mirror video only."
       ]
     },
     {
-      "question": "Question 5: After changing the Wi-Fi network, the app can't control the TV. How to deal with it?",
+      "question": "Q5. Can I change resolution and frame rate?",
       "answer": [
-        "Re-select the new Wi-Fi network in the TV's network settings and enter the password to connect.",
-        "Re-search and connect to the TV in the app."
+        "Yes. Set these before starting. Higher resolution is sharper but needs more bandwidth; higher frame rate is smoother but uses more battery and network."
       ]
     },
     {
-      "question": "Question 6: The TV has a good Wi-Fi signal strength, but the app still can't control it. What to do?",
+      "question": "Q6. My TV/device isn’t found. What should I do?",
       "answer": [
-        "It might be that there is a problem with the communication protocol between the TV and the app. Try uninstalling and reinstalling the app.",
-        "The firewall or security settings of the TV might prevent the connection of the app. Check the relevant settings of the TV and allow the app to access."
+        "Check:",
+        "Phone and TV on the same Wi-Fi; VPN/proxy disabled.",
+        "Router AP/client isolation is off; prefer 5 GHz.",
+        "TV has casting mode enabled (AirPlay/Miracast, etc.).",
+        "Reboot router, TV, and phone, then rescan."
       ]
     },
     {
-      "question": "Question 7: Conflicts occur when multiple devices use the app to control the TV simultaneously. How to avoid it?",
+      "question": "Q7. Connected but the TV is black/no picture.",
       "answer": [
-        "It is recommended to use only one device to control the TV via the app at a time.",
-        "If a conflict occurs, close the app on other devices or reconnect to Wi-Fi and open the app."
+        "Some apps block mirroring due to DRM or casting restrictions. Try other content (local media, photos, games) or another app that allows mirroring."
       ]
     },
     {
-      "question": "Question 8: Contact with support email: send your tv model and brand to support to get help",
+      "question": "Q8. I see video but no sound.",
       "answer": [
-        "Take a full picture if you do not know your model.",
-        "Describe as more detail as possible with your problem.",
-        "<a href='mailto:sgflymob@gmail.com'>sgflymob@gmail.com</a>"
+        "Enable Sound Mirroring and grant the mic permission before starting. Check TV volume/mute. Some content blocks audio capture."
+      ]
+    },
+    {
+      "question": "Q9. High delay or stutter—how to improve?",
+      "answer": [
+        "Use 5 GHz Wi-Fi, move closer to the router, reduce other network usage, lower resolution or frame rate, close heavy background apps, and reboot the router if needed."
+      ]
+    },
+    {
+      "question": "Q10. Why do I get a PIN/pairing prompt?",
+      "answer": [
+        "Some devices (e.g., AirPlay, certain TVs) require first‑time pairing. Enter the PIN shown on the TV or confirm on the TV screen."
+      ]
+    },
+    {
+      "question": "Q11. How do I stop mirroring quickly?",
+      "answer": [
+        "Pull down the notification shade and tap Stop Mirroring, or tap Stop on the app’s main screen."
+      ]
+    },
+    {
+      "question": "Q12. What happens when Wi-Fi is unavailable?",
+      "answer": [
+        "The app detects Wi-Fi status and guides you to connect to a network before scanning again."
+      ]
+    },
+    {
+      "question": "Q13. Do you store my screen content?",
+      "answer": [
+        "No. Mirroring data stays on your local network and is used only to cast to your TV. We don’t store or upload your screen."
+      ]
+    },
+    {
+      "question": "Q14. Can I use other apps on my phone while mirroring?",
+      "answer": [
+        "Yes, but DRM‑protected apps may block output. If you see throttling or lag, go to Home or lower quality and try again."
+      ]
+    },
+    {
+      "question": "Q15. Does mirroring continue when the phone is locked?",
+      "answer": [
+        "Some devices lower frame rate or stop in lock/power‑saving modes. Keep the screen awake or disable aggressive battery optimizations."
       ]
     }
   ]
