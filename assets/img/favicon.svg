@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="markGradient" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16A085"/>
+      <stop offset="0.48" stop-color="#1A7DDB"/>
+      <stop offset="1" stop-color="#FF7A4D"/>
+    </linearGradient>
+    <linearGradient id="wingGradient" x1="19" y1="18" x2="45" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDF8F1"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#markGradient)"/>
+  <path d="M17.5 39.1 48 15.9c2-1.5 4.5.7 3.6 3L38.3 50.2c-.9 2.3-4.3 2-4.8-.4l-2-10.5-10.7 4.1c-2.5 1-5.2-2.5-3.3-4.3Z" fill="url(#wingGradient)"/>
+  <path d="M31.1 39.4 49.8 16.9" fill="none" stroke="#0F6B61" stroke-width="2.6" stroke-linecap="round" opacity=".34"/>
+</svg>
